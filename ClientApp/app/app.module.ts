@@ -28,7 +28,7 @@ import { TransferHttpModule } from '../modules/transfer-http/transfer-http.modul
 import { MyNewComponentComponent } from './components/my-new-component/my-new-component.component';
 
 // New Imports
-import { MatRadioModule } from '@angular/material';
+import { MatRadioModule, MatSlideToggleModule } from '@angular/material';
 
 export function createTranslateLoader(http: Http, baseHref) {
     // Temporary Azure hack
@@ -57,6 +57,7 @@ export function createTranslateLoader(http: Http, baseHref) {
         HttpModule,
         FormsModule,
         MatRadioModule,
+        MatSlideToggleModule,
         Ng2BootstrapModule.forRoot(), // You could also split this up if you don't want the Entire Module imported
 
         TransferHttpModule, // Our Http TransferData method

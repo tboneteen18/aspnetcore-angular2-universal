@@ -2,6 +2,7 @@ import './polyfills/browser.polyfills';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module.browser';
+import 'hammerjs';
 
 const rootElemTagName = 'app'; // Update this if you change your root component selector
 
