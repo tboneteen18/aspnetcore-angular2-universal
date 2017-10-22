@@ -25,6 +25,10 @@ import { UserService } from './shared/user.service';
 // import { ConnectionResolver } from './shared/route.resolver';
 import { ORIGIN_URL } from './shared/constants/baseurl.constants';
 import { TransferHttpModule } from '../modules/transfer-http/transfer-http.module';
+import { MyNewComponentComponent } from './components/my-new-component/my-new-component.component';
+
+// New Imports
+import { MatRadioModule } from '@angular/material';
 
 export function createTranslateLoader(http: Http, baseHref) {
     // Temporary Azure hack
@@ -45,12 +49,14 @@ export function createTranslateLoader(http: Http, baseHref) {
         HomeComponent,
         // ChatComponent,
         NotFoundComponent,
-        NgxBootstrapComponent
+        NgxBootstrapComponent,
+        MyNewComponentComponent
     ],
     imports: [
         CommonModule,
         HttpModule,
         FormsModule,
+        MatRadioModule,
         Ng2BootstrapModule.forRoot(), // You could also split this up if you don't want the Entire Module imported
 
         TransferHttpModule, // Our Http TransferData method
