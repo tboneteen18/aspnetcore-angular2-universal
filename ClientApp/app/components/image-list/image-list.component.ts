@@ -12,10 +12,11 @@ import { Component, OnInit } from '@angular/core';
 export class ImageListComponent implements OnInit {
 
     tiles = [
-        {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-        {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-        {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-        {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+      { text: 'One', image: 'https://www.w3schools.com/images/colorpicker.gif'},
+      { text: 'Two', image: 'https://www.w3schools.com/images/colorpicker.gif'},
+      { text: 'Three', image: 'https://www.w3schools.com/images/colorpicker.gif'},
+      { text: 'Four', image: 'https://www.w3schools.com/images/colorpicker.gif'},
+      { text: 'Four', image: 'https://www.w3schools.com/images/colorpicker.gif' },
       ];
   constructor() { }
 
