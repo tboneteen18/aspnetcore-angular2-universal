@@ -29,7 +29,14 @@ import { MyNewComponentComponent } from './components/my-new-component/my-new-co
 import { ImageListComponent } from './components/image-list/image-list.component';
 
 // New Imports
-import { MatRadioModule, MatSlideToggleModule, MatGridListModule, MatTableModule } from '@angular/material';
+import { 
+    MatRadioModule, 
+    MatSlideToggleModule, 
+    MatGridListModule, 
+    MatTableModule, 
+    MatCardModule 
+} from '@angular/material';
+
 import { ServicesComponent } from './components/services/services.component';
 
 export function createTranslateLoader(http: Http, baseHref) {
@@ -64,6 +71,7 @@ export function createTranslateLoader(http: Http, baseHref) {
         MatSlideToggleModule,
         MatGridListModule,
         MatTableModule,
+        MatCardModule,
         Ng2BootstrapModule.forRoot(), // You could also split this up if you don't want the Entire Module imported
 
         TransferHttpModule, // Our Http TransferData method
