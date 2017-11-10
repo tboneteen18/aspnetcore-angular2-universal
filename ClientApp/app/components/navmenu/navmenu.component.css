@@ -34,6 +34,9 @@ li.link-active a:focus {
     font-size: 14px;
     background-color: #f1f1f1;
   }
+  
+
+
   .navbar-toggle {
     padding: 0px 5px;
     margin-top: 0px;
@@ -48,6 +51,10 @@ li.link-active a:focus {
 
   .navbar-collapse {
     background-color: white;
+  }
+
+  .navbar {
+    background-color: #f1f1f1;
   }
 
   .navbar a {
