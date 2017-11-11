@@ -2,6 +2,7 @@
   "name": "angular4-aspnetcore-universal",
   "version": "1.0.0-rc3",
   "scripts": {
+    "start": "npm run build:vendor && npm run build:webpack",
     "lint": "tslint -p tsconfig.json",
     "test": "npm run build:vendor && karma start ClientApp/test/karma.conf.js",
     "test:watch": "npm run test -- --auto-watch --no-single-run",
