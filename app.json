@@ -14,7 +14,7 @@
       "url": "heroku/nodejs"
     },
     {
-      "url": "https://github.com/ORuban/dotnet-core-buildpack.git"
+      "url": "https://github.com/jincod/dotnetcore-buildpack"
     }
   ]
 }
