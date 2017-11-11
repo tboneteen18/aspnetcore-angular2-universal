@@ -1,6 +1,11 @@
 {
   "name": "angular4-aspnetcore-universal",
   "version": "1.0.0-rc3",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tboneteen18/aspnetcore-angular2-universal.git"
+  },
   "scripts": {
     "start": "npm install && npm run build:dev && dotnet restore",
     "lint": "tslint -p tsconfig.json",
