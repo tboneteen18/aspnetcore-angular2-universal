@@ -6,19 +6,19 @@
         <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
         <!-- Name Column -->
-        <ng-container matColumnDef="name">
+        <ng-container matColumnDef="Name">
             <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-            <mat-cell *matCellDef="let service"> {{service.name}} </mat-cell>
+            <mat-cell *matCellDef="let services"> {{services.Name}} </mat-cell>
         </ng-container>
         <!-- Description Column -->
-        <ng-container matColumnDef="description">
+        <ng-container matColumnDef="Description">
             <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
-            <mat-cell *matCellDef="let service"> {{service.description}} </mat-cell>
+            <mat-cell *matCellDef="let services"> {{services.Description}} </mat-cell>
         </ng-container>
         <!-- Price Column -->
-        <ng-container matColumnDef="price">
+        <ng-container matColumnDef="Price">
             <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
-            <mat-cell *matCellDef="let service"> {{ service.price | currency:'USD':true }} </mat-cell>
+            <mat-cell *matCellDef="let services"> {{ services.Price | currency:'USD':true }} </mat-cell>
         </ng-container>
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>

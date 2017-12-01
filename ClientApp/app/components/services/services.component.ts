@@ -16,7 +16,7 @@ export class ServicesComponent implements OnInit {
 
   services: IService[];
   selectedService: IService;
-  displayedColumns = ['name', 'description', 'price'];
+  displayedColumns = ['Name', 'Description', 'Price'];
   dataSource = new ExampleDataSource();
 
    // Use "constructor"s only for dependency injection
@@ -24,7 +24,7 @@ export class ServicesComponent implements OnInit {
 
   ngOnInit() {
     this.serviceService.getServices().subscribe(result => {
-        console.log('Get user result: ', result);
+        console.log('Get service result: ', result);
         console.log('TransferHttp [GET] /api/services/allresult', result);
         this.services = result as IService[];
     });
@@ -35,25 +35,8 @@ export class ServicesComponent implements OnInit {
     }
 
 }
-
-    export interface Service {
-      name: string;
-      description: string;
-      price: number;
-    }
-
-    for (var i=0; i<IService.length; i+=size) {
-    newArr.push(arr.slice(i, i+size));
-  }
-    const data: Service[] = [
-      {name: this.services.name, description: this.services.description, price: this.services},
-      {name: 'Kids Cut', description: 'Helium', price: 10.00},
-      {name: 'Eye Lash Extensions', description: 'Lithium', price: 10.00},
-      {name: 'temp', description: 'Beryllium', price: 9.00},
-      {name: 'temp', description: 'Boron', price: 10.81},
-      {name: 'temp', description: 'Carbon', price: 12.01},
-      {name: 'temp', description: 'Nitrogen', price: 14.00},
-    ];
+    
+    const data: IService[] = this.services;
 
     /**
      * Data source to provide what data should be rendered in the table. The observable provided
@@ -63,9 +46,9 @@ export class ServicesComponent implements OnInit {
      */
     export class ExampleDataSource extends DataSource<any> {
       /** Connect function called by the table to retrieve one stream containing the data to render. */
-      connect(): Observable<Service[]> {
-        return Observable.of(data);
-      }
+      connect(): Observable<IService[]> {
+    return Observable.of(data);
+  }
 
       disconnect() {}
     }

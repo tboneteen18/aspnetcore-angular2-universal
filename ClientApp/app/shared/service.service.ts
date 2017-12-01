@@ -1,4 +1,5 @@
 ﻿import { Http, URLSearchParams } from '@angular/http';
+import { Injectable, Inject } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { ORIGIN_URL } from './constants/baseurl.constants';
 import { IService } from '../models/Service';
