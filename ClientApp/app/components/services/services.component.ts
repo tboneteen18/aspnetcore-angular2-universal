@@ -3,6 +3,8 @@ import {DataSource} from '@angular/cdk/collections';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import { CurrencyPipe } from '@angular/common';
+import { IService } from '../../models/Service';
+import { ServiceService } from '../../shared/service.service';
 
 @Component({
   selector: 'app-services',
@@ -12,12 +14,25 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class ServicesComponent implements OnInit {
 
+  services: IService[];
+  selectedService: IService;
   displayedColumns = ['name', 'description', 'price'];
   dataSource = new ExampleDataSource();
-  constructor() { }
+
+   // Use "constructor"s only for dependency injection
+    constructor(private serviceService: ServiceService) { }
 
   ngOnInit() {
+    this.serviceService.getServices().subscribe(result => {
+        console.log('Get user result: ', result);
+        console.log('TransferHttp [GET] /api/services/allresult', result);
+        this.services = result as IService[];
+    });
   }
+
+  onSelect(service: IService): void {
+        this.selectedService = service;
+    }
 
 }
 
@@ -27,8 +42,11 @@ export class ServicesComponent implements OnInit {
       price: number;
     }
 
+    for (var i=0; i<IService.length; i+=size) {
+    newArr.push(arr.slice(i, i+size));
+  }
     const data: Service[] = [
-      {name: 'Micro Blade', description: 'Hydrogen', price: 10.00},
+      {name: this.services.name, description: this.services.description, price: this.services},
       {name: 'Kids Cut', description: 'Helium', price: 10.00},
       {name: 'Eye Lash Extensions', description: 'Lithium', price: 10.00},
       {name: 'temp', description: 'Beryllium', price: 9.00},

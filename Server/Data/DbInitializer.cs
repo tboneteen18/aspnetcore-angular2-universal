@@ -36,6 +36,53 @@ namespace AspCoreServer.Data
             {
                 context.User.Add(s);
             }
+
+            //if (context.Product.Any())
+            //{
+            //    return;   // DB has been seeded
+            //}
+            //var products = new Product[]
+            //{
+            //    new Product()
+            //    {
+            //        //ProductId = 1,
+            //        Name = "Shampoo",
+            //        Description = "Shampoo Description",
+            //        DateCreated = DateTime.Now,
+            //        PurchaseCost = 0,
+            //        SalePrice = 0,
+
+            //    }
+            //};
+
+            //foreach (Product s in products)
+            //{
+            //    context.Product.Add(s);
+            //}
+
+            if (context.Service.Any())
+            {
+                return;   // DB has been seeded
+            }
+            var services = new Service[]
+            {
+                new Service()
+                {
+                    //ServiceId = 1,
+                    Name = "Eye Lash Extentions",
+                    Description = "Eye Lash Extentions Description",
+                    DateCreated = DateTime.Now.ToString(),
+                    IsActive = true.ToString(),
+                    Price = 0,
+
+                }
+            };
+
+            foreach (Service s in services)
+            {
+                context.Service.Add(s);
+            }
+
             context.SaveChanges();
         }
     }

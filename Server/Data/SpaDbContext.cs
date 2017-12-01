@@ -12,6 +12,17 @@ namespace AspCoreServer.Data
         }
 
         //List of DB Models - Add your DB models here
+
+        /// <summary>
+        /// Gets or sets the user.
+        /// </summary>
+        /// <value>The user.</value>
         public DbSet<User> User { get; set; }
+
+        /// <summary>
+        /// Gets or sets the service.
+        /// </summary>
+        /// <value>The service.</value>
+        public DbSet<Service> Service { get; set; }
     }
 }
