@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -71,8 +71,8 @@ namespace AspCoreServer.Data
                     //ServiceId = 1,
                     Name = "Eye Lash Extentions",
                     Description = "Eye Lash Extentions Description",
-                    DateCreated = DateTime.Now.ToString(),
-                    IsActive = true.ToString(),
+                    DateCreated = DateTime.Now,
+                    IsActive = true,
                     Price = 0,
 
                 }

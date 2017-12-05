@@ -1,4 +1,4 @@
-﻿using AspCoreServer.Data;
+using AspCoreServer.Data;
 using AspCoreServer.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,12 +19,10 @@ namespace AspCoreServer.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get(int currentPageNo = 1, int pageSize = 20)
+        public async Task<IActionResult> Get()
         {
             var services = await _context.Service
-                .OrderByDescending(u => u.ServiceId)
-                .Skip((currentPageNo - 1) * pageSize)
-                .Take(pageSize)
+                .OrderBy(u => u.ServiceId)
                 .ToArrayAsync();
 
             if (!services.Any())

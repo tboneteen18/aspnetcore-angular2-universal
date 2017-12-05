@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AspCoreServer.Models
@@ -9,13 +9,13 @@ namespace AspCoreServer.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public double Price { get; set; }
-        public string IsActive { get; set; }
-        public string DateCreated { get; set; }
+        public bool IsActive { get; set; }
+        public DateTime DateCreated { get; set; }
 
         //Setting Default value
         public Service()
         {
-            DateCreated = DateTime.Now.ToString();
+            DateCreated = DateTime.Now;
         }
     }
 }

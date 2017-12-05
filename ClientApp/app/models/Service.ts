@@ -1,8 +1,8 @@
-﻿export interface IService {
+export interface IService {
     serviceId: number;
     name: string;
     description: string;
     price: number;
-    isActive: string;
+    isActive: boolean;
     dateCreated: string;
 }
